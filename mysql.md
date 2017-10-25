@@ -1,5 +1,5 @@
-Setup docker-compose entry for latest MySql
-
+# Setup docker-compose entry for latest MySql
+```
 version: '2'
 services:
 
@@ -17,3 +17,4 @@ database:
 
 volumes:
   dbdata:
+```
