@@ -10,7 +10,7 @@
 - list: `docker ps -a`
 - delete: `docker rm ID_or_Name ID_or_Name ...`
 - all exited: `docker ps -a -f status=exited`
-- delete all exited: `docker rm $$docker ps -a -f status=exited -q)`
+- delete all exited: `docker rm $(docker ps -a -f status=exited -q)`
 - stop all: `docker stop $(docker ps -a -q)`
 - delete all: `docker rm $(docker ps -a -q)`
 
