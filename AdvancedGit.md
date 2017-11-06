@@ -33,6 +33,14 @@ git stash drop stash@{0}                // remove the nth stash
 git stash clear                         // remove ALL stashes
 git stash list
 git stash show stash@{0}
+
+// tags - pointer to a commit
+git tag v1.0.0                    // lightweight tag - not used very much
+git tag -a v1.1.0 -m 'Message'    // annotated tag
+git tag                           // list all tags
+git show v1.0.0                   // show detail for tag v1.0.0
+git show-ref --tags               // list all tags and their commit hash
+git tag --points-at <commit>      // list all tags pointing at a commit
 ```
 
 
