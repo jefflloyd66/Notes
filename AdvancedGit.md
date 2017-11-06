@@ -4,6 +4,35 @@ blob
 
 git cat-file -p 980a0
 Hello, World!
+
+git ls-files -s
+100644 8ab686eafeb1f44702738c8b0f24f2567c36da6d 0	hello.txt
+
+git add <file>
+git rm <file>
+git mv <file>
+
+// stage commit in chunks
+git add -p                              // interactively add hunks
+
+// stashes
+git stash
+git stash -p                            // interactively stash hunks
+git stash list
+git stash show stash@{0}
+git stash apply
+git stash apply stash@{0}
+git stash --include-untracked           // include untracked files
+git stash --all                         // be careful - even ignored files!!!
+git stash save "WIP: some message..."   // name a stash
+git stash branch <optional stash name>  // start a new branch from stash
+git checkout <stash name> -- <filename> // grab a sinlge file from a stash
+git stash pop                           // remove last stash and apply changes
+git stash drop                          // remove the last stash
+git stash drop stash@{0}                // remove the nth stash
+git stash clear                         // remove ALL stashes
+git stash list
+git stash show stash@{0}
 ```
 
 
